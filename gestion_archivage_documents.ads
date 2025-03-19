@@ -6,4 +6,3 @@ Package Gestion_Archivage_Documents is
    Use Fichier_Archivage_Document;
 End Gestion_Archivage_Documents;
 
-oupsiii non
