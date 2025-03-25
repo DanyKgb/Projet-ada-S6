@@ -1,5 +1,5 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, gestion_patient, Outils;
+USE Ada.Text_Io, Ada.Integer_Text_Io, gestion_patient, Outils;
 
 Package gestion_arbre_patient is
    Type T_Noeuds_Patients;

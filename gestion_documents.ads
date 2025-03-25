@@ -1,10 +1,10 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, Outils, gestion_dates, gestion_personnel, Gestion_Liste_Personnel;
+USE Ada.Text_Io, Ada.Integer_Text_Io, Outils, gestion_dates, gestion_personnel, Gestion_Liste_Personnel;
 
 Package Gestion_Documents is
    Type Type_Document is (Ordonnances, Certificat, Compte_Rendu, Resultat_Examen);
 
-   Type Document is record
+   Type T_Document is record
       Identifiant : Integer;
       Titre : T_titre;
       K_titre : Integer;

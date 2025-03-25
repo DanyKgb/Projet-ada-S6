@@ -1,5 +1,5 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, Outils;
+USE Ada.Text_Io, Ada.Integer_Text_Io, Outils;
 
 Package gestion_connexion is
    Type T_fonction is (personnel, patient);

@@ -1,5 +1,5 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, gestion_connexion;
+USE Ada.Text_Io, Ada.Integer_Text_Io, gestion_connexion;
 
 Package gestion_files_connexion is
    Type T_Cell_connex;

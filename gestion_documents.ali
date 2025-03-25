@@ -1,0 +1,96 @@
+V "GNAT Lib v2020"
+P ZX
+
+RN
+RV NO_IO
+
+U gestion_documents%s	gestion_documents.ads	3745d462 NE OO PK KM
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W gestion_dates%s	gestion_dates.ads	gestion_dates.ali
+W gestion_liste_personnel%s  gestion_liste_personnel.ads  gestion_liste_personnel.ali
+W gestion_personnel%s	gestion_personnel.ads	gestion_personnel.ali
+W outils%s		outils.ads		outils.ali
+
+D ada.ads		20200819050642 76789da1 ada%s
+D a-except.ads		20200819050642 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050642 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050642 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050642 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
+D gestion_dates.ads	20250319184439 a689ffa0 gestion_dates%s
+D gestion_documents.ads	20250325151045 dae408fe gestion_documents%s
+D gestion_liste_personnel.ads  20250325150742 445dd858 gestion_liste_personnel%s
+D gestion_personnel.ads	20250325151020 90da3897 gestion_personnel%s
+D gestion_utilisateurs.ads  20250325145945 7eeae1c5 gestion_utilisateurs%s
+D interfac.ads		20200819050644 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
+D outils.ads		20250319185444 c7109f3a outils%s
+D system.ads		20200819050647 085b6ffb system%s
+D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050645 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050646 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050646 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050646 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050646 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050646 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050646 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050646 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050646 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
+G a e
+G c Z s s [t_documentIP gestion_documents 7 9 none]
+G c Z s s [t_docarchiveIP gestion_documents 19 9 none]
+G r s t_personne [t_documentIP gestion_documents 7 9 none] [t_personneIP outils 10 9 none]
+G r s t_personne [t_docarchiveIP gestion_documents 19 9 none] [t_personneIP outils 10 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 1r19 2r5 2r18
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 11|1w23 2r22
+X 7 a-textio.ads
+57K13*Text_IO 727e16 11|1w10 2r9
+X 10 gestion_dates.ads
+4K9*gestion_dates 13e18 11|1w48 2r47
+8R9*T_date 12e14 11|14r23 15r22 16r36 27r23 28r22 29r36
+X 11 gestion_documents.ads
+4K9*Gestion_Documents 31l5 31e22
+5E9*Type_Document 5e82 11r16 23r13
+5n27*Ordonnances{5E9}
+5n40*Certificat{5E9}
+5n52*Compte_Rendu{5E9}
+5n66*Resultat_Examen{5E9}
+7R9*T_Document 17e14
+8i7*Identifiant{integer}
+9a7*Titre{17|6A12}
+10i7*K_titre{integer}
+11e7*Nature{5E9}
+12r7*Medecin{17|10R9}
+13b7*Lecture{boolean}
+14r7*Date_Creation{10|8R9}
+15r7*Date_lecture{10|8R9}
+16r7*Date_Derniere_Modification{10|8R9}
+19R9*T_docArchive 30e14
+20i7*Id{integer}
+21a7*titre{17|6A12}
+22i7*k_titre{integer}
+23e7*nat{5E9}
+24r7*id_med{17|10R9}
+25r7*id_patient{17|10R9}
+26b7*Lecture{boolean}
+27r7*Date_Creation{10|8R9}
+28r7*Date_lecture{10|8R9}
+29r7*Date_Derniere_Modification{10|8R9}
+X 12 gestion_liste_personnel.ads
+4K9*Gestion_Liste_Personnel 11|1w82 2r81 12|12e28
+X 13 gestion_personnel.ads
+4K9*gestion_personnel 11|1w63 2r62 13|15e22
+X 17 outils.ads
+4K9*Outils 11|1w40 2r39 17|14e11
+6A12*T_titre{string}<integer> 11|9r15 21r15
+10R9*T_Personne 11|12r17 24r16 25r20 17|13e14
+

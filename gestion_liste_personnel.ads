@@ -1,5 +1,5 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, gestion_personnel, Outils, Gestion_Utilisateurs;
+USE Ada.Text_Io, Ada.Integer_Text_Io, gestion_personnel, Outils, Gestion_Utilisateurs;
 
 Package Gestion_Liste_Personnel is
    Type T_cell_personnel;
