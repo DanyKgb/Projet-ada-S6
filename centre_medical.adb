@@ -5,4 +5,5 @@ procedure centre_medical is
 
 begin 
    Put_Line("Bienvenue dans le centre médical");
+   put8line ("mdr wesh ");
 end centre_medical;
