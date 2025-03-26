@@ -46,6 +46,42 @@ PACKAGE BODY Outils IS
          Saisie_Mot(Personne.Prenom, personne.k_prenom);
    END Saisie_Identite;
 
-   --procedure saisie_mdp (mdp : out T) is
+   FUNCTION Verif_Mdp (Mdp : Taille_Mdp) RETURN Boolean IS
+      Saisie_Mdp:Boolean;
+   BEGIN
+      FOR I IN mdp' range LOOP -- on regarde pour chaque  si elle est valide --
+         CASE Mdp(I) IS
+            WHEN 'a'..'z'|'A'..'Z'|'#'|'*'|'.'|'!'|'?'|'0'..'9' => Saisie_Mdp:=True;
+            When others => Saisie_Mdp:=False;
+            Exit; 
+         end case;
+      End Loop; 
+      RETURN (Saisie_Mdp);
+   END Verif_Mdp;
+
+
+PROCEDURE Saisie_Mdp (Mdp :IN OUT Outil.T_Mdp) IS
+      Saisie:boolean;
+      k:integer;
+   BEGIN
+      LOOP
+         BEGIN
+         Mdp :=("          ");
+            Put_Line("Saisir le mot de passe. En utilisant des Letres majuscules, minuscules,des chiffres et les caractères suivants : #,*,.,!,?, Le mot de passe doit Faire 10 caractères");
+            Get_Line(Mdp,K);
+            Exit when k=10;
+            saisie:=Verif_Mdp(Mdp);
+            EXIT WHEN Saisie=True;
+         EXCEPTION
+            WHEN Constraint_Error => Put_Line("/!\ Mauvaise saisie /!\");
+            WHEN Data_Error => Put_Line("/!\ Veuillez utiliser les caractères autorisés /!\");
+         end;
+
+      
+      End Loop;
+
+
+   END Saisie_Mdp;
+
 
 END Outils;

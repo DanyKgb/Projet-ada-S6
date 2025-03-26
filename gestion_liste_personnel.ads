@@ -11,4 +11,5 @@ Package Gestion_Liste_Personnel is
    End record;
 
    procedure Ajout_liste (tete : in out T_pteur_personnel; pers : in T_personnel);
+   procedure visu_liste (tete : in T_pteur_personnel);
 End Gestion_Liste_Personnel;

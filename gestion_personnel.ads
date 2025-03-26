@@ -2,7 +2,7 @@ WITH Ada.Text_Io, Ada.Integer_Text_Io, Outils, Gestion_Utilisateurs;
 USE Ada.Text_Io, Ada.Integer_Text_Io, Outils, Gestion_Utilisateurs;
 
 Package gestion_personnel is
-   Type T_metier is (Medecin, Secretaire, administrateur);
+   Type T_metier is (medecin,secretaire,administrateur);
 
    Type T_personnel is record
       Id_personnel : T_personne;

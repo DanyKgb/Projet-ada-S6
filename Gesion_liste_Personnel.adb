@@ -19,4 +19,19 @@ package body Gestion_Liste_Personnel is
       end if;
    end Ajout_liste;
 
+   procedure visu_liste (tete : in T_pteur_personnel) is 
+      
+   begin 
+
+      if tete /= null then 
+         Put_Line("identifiant : ");
+         Put(tete.perso.Id_personnel.Nom,tete.perso.Id_personnel.k_nom);
+         Put(tete.perso.Id_personnel.Prenom,tete.perso.Id_personnel.k_prenom);
+         Put_Line("nom de famille de la mère : ");
+         Put(tete.perso.Nom_famille_mere,tete.perso.k_nomMere);
+         Put_Line("metier : ");
+         Put(T_metier'image(tete.perso.Metier));
+      end if;
+      visu_liste ((tete.suiv));
+   end visu_liste;
 end Gestion_Liste_Personnel;
