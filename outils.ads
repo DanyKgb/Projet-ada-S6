@@ -1,5 +1,5 @@
-WITH Ada.Text_Io, Ada.Integer_Text_Io;
-USE Ada.Text_Io, Ada.Integer_Text_Io;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, Ada.Characters.Handling;
+USE Ada.Text_Io, Ada.Integer_Text_Io, Ada.Characters.Handling;
 
 Package Outils is
    Subtype T_Mot is String (1 .. 20);
@@ -11,4 +11,7 @@ Package Outils is
       Nom, Prenom : T_Mot := (Others => ' ');
       k_nom, k_prenom : Integer;
    End record;
+
+   procedure Saisie_Mot (P : out T_Mot; K : Integer);
+   procedure Saisie_Identite (P, N : out T_Mot);
 End Outils;
