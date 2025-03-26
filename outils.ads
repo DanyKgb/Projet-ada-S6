@@ -13,5 +13,5 @@ Package Outils is
    End record;
 
    procedure Saisie_Mot (P : out T_Mot; K : Integer);
-   procedure Saisie_Identite (P, N : out T_Mot);
+   procedure Saisie_Identite (personne : OUT T_Personne);
 End Outils;

@@ -12,4 +12,6 @@ Package gestion_personnel is
       Metier : T_metier;
       new_mdp_Personnel : Boolean;
    End record;
+   procedure saisie_personnel (pers : out T_personnel);
+
 End gestion_personnel;
