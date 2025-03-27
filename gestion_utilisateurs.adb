@@ -10,9 +10,9 @@ Package body Gestion_Utilisateurs is
    begin
 
       log := (others => ' ');
-      NOM := to_upper(pers.Nom,pers.k_nom);
-      PRENOM := to_upper(pers.Prenom,pers.k_prenom);
-      log := NOM & "_" & PRENOM;
+      NOM := to_upper(pers.Nom);
+      PRENOM := to_upper(pers.Prenom);
+      log := NOM& "_" & PRENOM;
       return log;
    end generer_log;
 
@@ -26,18 +26,18 @@ begin
       for i in log'range loop
          case log(i) is
             when 'A' .. 'Z' => null;
-            when '_' => if i /= log'first and then i/= log'last then 
-                           if log(i)= '_' then 
-                              log(i-1) := 'A'..'Z';
-                              log(i+1) := 'A'..'Z';
-                           end if;
-                           ok:=true;
-                        else
-                           ok:=false;
-                        end if;
-                        
-            when others => ok := false;
+            WHEN '-' => -- Doivent être précédé ou suivie d'une lettre
+                  IF ((I = log'First) OR ELSE (I = log'Last)) OR ELSE ((log(I-1) = '-') OR ELSE (log(I+1) = '_')) THEN
+                     OK := False;
+                     EXIT;
+                  END IF;
+               WHEN OTHERS =>
+                  OK := False;
+                  EXIT;
          end case;
+      end loop;
+      exit when ok = true;
+   end loop;
 end saisie_log;
 
 end Gestion_Utilisateurs;

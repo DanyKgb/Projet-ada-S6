@@ -60,7 +60,7 @@ PACKAGE BODY Outils IS
    END Verif_Mdp;
 
 
-PROCEDURE Saisie_Mdp (Mdp :IN OUT Outil.T_Mdp) IS
+PROCEDURE Saisie_Mdp (Mdp :IN OUT Taille_Mdp) IS
       Saisie:boolean;
       k:integer;
    BEGIN

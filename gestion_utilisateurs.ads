@@ -11,4 +11,5 @@ Package Gestion_Utilisateurs is
    End record;
    
    function generer_log (pers : T_personne; log : out T_log) return T_log;
+   procedure saisie_log (log : out T_log);
 End Gestion_Utilisateurs;
