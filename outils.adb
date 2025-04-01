@@ -76,12 +76,9 @@ PROCEDURE Saisie_Mdp (Mdp :IN OUT Taille_Mdp) IS
             WHEN Constraint_Error => Put_Line("/!\ Mauvaise saisie /!\");
             WHEN Data_Error => Put_Line("/!\ Veuillez utiliser les caractères autorisés /!\");
          end;
-
       
       End Loop;
 
-
    END Saisie_Mdp;
-
 
 END Outils;

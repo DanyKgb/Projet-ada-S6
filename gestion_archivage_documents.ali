@@ -1,0 +1,113 @@
+V "GNAT Lib v2020"
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U gestion_archivage_documents%s  gestion_archivage_documents.ads  0daa6c37 NE OO PK KM
+W ada%s			ada.ads			ada.ali
+Z ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.sequential_io%s
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_conversion%s
+W gestion_dates%s	gestion_dates.adb	gestion_dates.ali
+W gestion_documents%s	gestion_documents.ads	gestion_documents.ali
+W gestion_liste_documents%s  gestion_liste_documents.ads  gestion_liste_documents.ali
+W gestion_liste_personnel%s  gestion_liste_personnel.adb  gestion_liste_personnel.ali
+W gestion_personnel%s	gestion_personnel.adb	gestion_personnel.ali
+W interfaces%s		interfac.ads		interfac.ali
+Z interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W outils%s		outils.adb		outils.ali
+W system%s		system.ads		system.ali
+Z system.byte_swapping%s  s-bytswa.ads		s-bytswa.ali
+Z system.crtl%s		s-crtl.ads		s-crtl.ali
+Z system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+Z system.file_io%s	s-fileio.adb		s-fileio.ali
+Z system.sequential_io%s  s-sequio.adb		s-sequio.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20200819050642 76789da1 ada%s
+D a-charac.ads		20200819050641 2d3ec45b ada.characters%s
+D a-chahan.ads		20200819050641 1601a50f ada.characters.handling%s
+D a-except.ads		20200819050642 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050642 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050642 e4a01f64 ada.io_exceptions%s
+D a-sequio.ads		20200819050642 3573d8ce ada.sequential_io%s
+D a-sequio.adb		20200819050642 3a82bda9 ada.sequential_io%b
+D a-stream.ads		20200819050642 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
+D gestion_archivage_documents.ads  20250325150913 79bdf220 gestion_archivage_documents%s
+D gestion_dates.ads	20250325154020 898bd014 gestion_dates%s
+D gestion_documents.ads	20250325151045 dae408fe gestion_documents%s
+D gestion_liste_documents.ads  20250325150650 e36e33f9 gestion_liste_documents%s
+D gestion_liste_personnel.ads  20250401152215 14e1f3c2 gestion_liste_personnel%s
+D gestion_personnel.ads	20250326123733 8a0d58d1 gestion_personnel%s
+D gestion_utilisateurs.ads  20250326182206 f0acdc54 gestion_utilisateurs%s
+D interfac.ads		20200819050644 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
+D outils.ads		20250331130555 6f8906d9 outils%s
+D system.ads		20200819050647 085b6ffb system%s
+D s-bytswa.ads		20200819050645 799c7440 system.byte_swapping%s
+D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050645 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
+D s-fileio.ads		20200819050645 45ce2f0f system.file_io%s
+D s-parame.ads		20200819050646 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050646 9b3ab94b system.secondary_stack%s
+D s-sequio.ads		20200819050646 fc7560a7 system.sequential_io%s
+D s-soflin.ads		20200819050646 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050646 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050646 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050646 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050646 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050646 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
+G a e
+G c Z s s [create gestion_archivage_documents__fichier_archivage_document 70 14 5_4]
+G c Z s s [open gestion_archivage_documents__fichier_archivage_document 76 14 5_4]
+G c Z s s [close gestion_archivage_documents__fichier_archivage_document 82 14 5_4]
+G c Z s s [delete gestion_archivage_documents__fichier_archivage_document 83 14 5_4]
+G c Z s s [reset gestion_archivage_documents__fichier_archivage_document 84 14 5_4]
+G c Z s s [reset gestion_archivage_documents__fichier_archivage_document 85 14 5_4]
+G c Z s s [mode gestion_archivage_documents__fichier_archivage_document 87 13 5_4]
+G c Z s s [name gestion_archivage_documents__fichier_archivage_document 88 13 5_4]
+G c Z s s [form gestion_archivage_documents__fichier_archivage_document 89 13 5_4]
+G c Z s s [is_open gestion_archivage_documents__fichier_archivage_document 91 13 5_4]
+G c Z s s [flush gestion_archivage_documents__fichier_archivage_document 93 14 5_4]
+G c Z s s [read gestion_archivage_documents__fichier_archivage_document 99 14 5_4]
+G c Z s s [write gestion_archivage_documents__fichier_archivage_document 100 14 5_4]
+G c Z s s [end_of_file gestion_archivage_documents__fichier_archivage_document 102 13 5_4]
+G c Z s s [to_fcb gestion_archivage_documents__fichier_archivage_document 60 13 5_4]
+G c Z s s [to_sio gestion_archivage_documents__fichier_archivage_document 61 13 5_4]
+G c Z s s [byte_swap gestion_archivage_documents__fichier_archivage_document 66 14 5_4]
+X 1 ada.ads
+16K9*Ada 20e8 14|1r6 5r46
+X 7 a-sequio.ads
+43k13*Sequential_IO 160e22 14|1w10 5r50
+X 14 gestion_archivage_documents.ads
+4K9*Gestion_Archivage_Documents 7l5 7e32
+5K12*Fichier_Archivage_Document[7|43] 6r8
+X 15 gestion_dates.ads
+4K9*gestion_dates 14|1w58 2r57 15|20e18
+X 16 gestion_documents.ads
+4K9*Gestion_Documents 14|1w117 2r5 2r116 16|31e22
+19R9*T_docArchive 14|5r65 16|30e14
+X 17 gestion_liste_documents.ads
+5K9*Gestion_Liste_Documents 14|1w25 2r24 17|13e28
+X 18 gestion_liste_personnel.ads
+4K9*Gestion_Liste_Personnel 14|1w92 2r91 18|17e28
+X 19 gestion_personnel.ads
+4K9*gestion_personnel 14|1w73 2r72 19|17e22
+X 23 outils.ads
+4K9*Outils 14|1w50 2r49 23|19e11
+

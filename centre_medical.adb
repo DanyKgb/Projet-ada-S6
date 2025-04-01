@@ -2,8 +2,9 @@ with ada.Text_IO, ada.integer_Text_IO, Ada.Characters.Handling, Outils, gestion_
 use ada.Text_IO, ada.integer_Text_IO, Ada.Characters.Handling, Outils, gestion_arbre_patient, gestion_connexion, gestion_dates, gestion_files_connexion, gestion_patient, gestion_personnel, Gestion_Archivage_Documents, Gestion_Documents, Gestion_Liste_Documents, Gestion_Liste_Personnel, Gestion_Utilisateurs;
 
 procedure centre_medical is 
-
+   tete_pers : T_pteur_personnel;
+   personne : T_personnel;
 begin 
-   Put_Line("Bienvenue dans le centre médical");
-   put8line ("mdr wesh ");
+   initialiser_liste (tete_pers);
+   visu_liste (tete_pers);
 end centre_medical;

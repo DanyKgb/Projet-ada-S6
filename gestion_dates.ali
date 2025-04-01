@@ -1,0 +1,127 @@
+V "GNAT Lib v2020"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+
+U gestion_dates%b	gestion_dates.adb	e6977134 NE OO PK IL KU
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system%s		system.ads		system.ali
+Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+Z system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+U gestion_dates%s	gestion_dates.ads	c73529d2 EE NE OO PK IL KM
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200819050642 76789da1 ada%s
+D a-charac.ads		20200819050641 2d3ec45b ada.characters%s
+D a-chahan.ads		20200819050641 1601a50f ada.characters.handling%s
+D a-except.ads		20200819050642 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050642 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050642 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050642 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
+D gestion_dates.ads	20250325154020 898bd014 gestion_dates%s
+D gestion_dates.adb	20250325153607 21a258e6 gestion_dates%b
+D interfac.ads		20200819050644 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
+D system.ads		20200819050647 085b6ffb system%s
+D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050645 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
+D s-imenne.ads		20200819050645 614c06c0 system.img_enum_new%s
+D s-parame.ads		20200819050646 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050646 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050646 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050646 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050646 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050646 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050646 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050646 5ecf7212 system.unsigned_types%s
+D s-valenu.ads		20200819050646 6201ebfb system.val_enum%s
+D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [annee_bis gestion_dates 14 13 none]
+G c Z s b [nb_jour_max gestion_dates 15 13 none]
+G c Z s b [saisie_date gestion_dates 17 14 none]
+G c Z s b [visu_date gestion_dates 18 14 none]
+G c Z s b [jour_suivant gestion_dates 19 14 none]
+G c Z s s [t_dateIP gestion_dates 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r19 1r40 2r5 2r18 2r39 13|1r6 1r19 1r40 2r5 2r18 2r39
+X 2 a-charac.ads
+16K13*Characters 18e19 12|1r44 2r43 13|1r44 2r43
+X 3 a-chahan.ads
+36K24*Handling 159e28 12|1w55 2r54 13|1w55 2r54
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 12|1w23 2r22 13|1w23 2r22
+X 9 a-textio.ads
+57K13*Text_IO 727e16 12|1w10 2r9 13|1w10 2r9
+264U14*New_Line 13|129s21
+273U14*Skip_Line 13|68s66 73s32 74s37 95s37 106s66 111s32 112s37
+465U14*Put 13|68s13 88s13 106s13 127s20 128s7 128s34
+481U14*Get_Line 13|88s43
+508U14*Put_Line 13|62s8 73s43 74s48 95s48 111s43 112s48 178s7
+548X4*Data_Error 13|73r18 111r18
+X 10 a-tiinio.ads
+59U14*Get 13|68s51[5|18] 106s54[5|18]
+80U14*Put 13|127s7[5|18] 129s7[5|18]
+X 12 gestion_dates.ads
+4K9*gestion_dates 20l5 20e18 13|4b14 182l5 182t18
+5E9*T_mois 5e116 10r14 15r30 13|29r30 89r23 128r11 167r29 174r29
+5n20*janvier{5E9} 13|37r15 142r20 162r18
+5n29*fevrier{5E9} 13|146r18
+5n38*mars{5E9} 13|37r25 151r32 158r32 162r26
+5n44*avril{5E9} 13|39r15
+5n51*mai{5E9} 13|37r32 162r31
+5n56*juin{5E9} 13|39r23
+5n62*juillet{5E9} 13|37r38 162r35
+5n71*aout{5E9} 13|37r48 162r43
+5n77*septembre{5E9} 13|39r30
+5n88*octobre{5E9} 13|37r55 162r48
+5n97*novembre{5E9} 13|39r42
+5n107*decembre{5E9} 13|37r65 140r19 162r56
+6I12*int_31{integer} 9r14
+8R9*T_date 12e14 17r35 18r29 19r39 13|55r35 123r29 137r38
+9i7*jour{6I12} 13|106m60 107r25 127r13 140r34 143m12 148r24 149m24 149r34
+. 152m24 155r24 156m24 156r34 159m24 163r21 164m21 164r31 166m21 170r21 171m21
+. 171r31 173m21
+10e7*mois{5E9} 13|89m15 107r47 128r26 140r12 142m12 145r17 151m24 158m24
+. 167m21 167r43 174m21 174r43
+11i7*annee{integer} 13|68m58 107r55 129r13 141m12 141r23 147r31
+14V13*annee_bis{boolean} 14>24 13|11b13 25l8 25t17 42s28 147s19
+14i24 Annee{integer} 13|11b24 17r11 17r34 17r58
+15V13*NB_jour_max{integer} 15>26 15>38 13|29b13 51l8 51t19 107s33
+15e26 M{5E9} 13|29b26 35r12
+15i38 Annee{integer} 13|29b39 42r38
+17U14*saisie_date 17<27 13|55b14 118l8 118t19
+17r27 D{8R9} 13|55b27 68m56 68r56 89m13 106m58 106r58 107r23 107r45 107r53
+18U14*visu_date 18>25 13|123b14 132l8 132t17 179s7
+18r25 D{8R9} 13|123b25 127r11 128r24 129r11
+19U14*jour_suivant 19=28 13|137b14 180l8 180t20
+19r28 D{8R9} 13|137b27 140r10 140r32 141m10 141r21 142m10 143m10 145r15 147r29
+. 148r22 149m22 149r32 151m22 152m22 155r22 156m22 156r32 158m22 159m22 163r19
+. 164m19 164r29 166m19 167m19 167r41 170r19 171m19 171r29 173m19 174m19 174r41
+. 179r17
+X 13 gestion_dates.adb
+13b7 bis{boolean} 18m10 20m10 23r14
+31i7 J_max{integer} 37m77 39m54 43m28 44m30 49r14
+57i9 k{integer} 88m54 89r41
+58a9 s{string} 86m13 88m52 89r36
+
