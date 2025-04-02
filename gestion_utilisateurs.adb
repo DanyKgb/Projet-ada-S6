@@ -48,7 +48,7 @@ procedure saisie_mdp (mdp : out Taille_Mdp) is
 begin
    loop
       Put("Saisir le mot de passe : ");
-      get_line
+      --get_line
       ok := true;
       for i in mdp'range loop
          case mdp(i) is
