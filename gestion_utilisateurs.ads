@@ -11,10 +11,11 @@ Package Gestion_Utilisateurs is
       mdp : Taille_Mdp;
    End record;
    
-   function generer_log (pers : T_personne; log : out T_log) return T_log;
+   procedure generer_log (pers : T_personne; log : out T_log) ;
    procedure saisie_log (log : out T_log);
+   procedure visu_log (log : in T_log);
    --  function calcul_empreinte (empreinte : integer) return Integer;
-   procedure saisie_mdp (mdp :  out Taille_Mdp);
-   procedure saisie_user (user : out T_Utilisateur);
+   --  procedure saisie_mdp (mdp :  out Taille_Mdp);
+   --  procedure saisie_user (user : out T_Utilisateur);
 
 End Gestion_Utilisateurs;

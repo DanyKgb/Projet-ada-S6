@@ -1,12 +1,10 @@
 with ada.Text_IO, ada.integer_Text_IO, Ada.Characters.Handling, Outils, gestion_arbre_patient, gestion_connexion, gestion_dates, gestion_files_connexion, gestion_patient, gestion_personnel, Gestion_Archivage_Documents, Gestion_Documents, Gestion_Liste_Documents, Gestion_Liste_Personnel, Gestion_Utilisateurs;
 use ada.Text_IO, ada.integer_Text_IO, Ada.Characters.Handling, Outils, gestion_arbre_patient, gestion_connexion, gestion_dates, gestion_files_connexion, gestion_patient, gestion_personnel, Gestion_Archivage_Documents, Gestion_Documents, Gestion_Liste_Documents, Gestion_Liste_Personnel, Gestion_Utilisateurs;
 
-procedure centre_medical is 
-   tete_pers : T_pteur_personnel;
-   personne : T_personnel;
-begin 
+procedure test is 
 
-   initialiser_liste (tete_pers, personne);
-   put_line("initialisation de la liste");
-   visu_liste (tete_pers);
-end centre_medical;
+begin
+
+   Put_Line("Test de la gestion des patients");
+
+end test;

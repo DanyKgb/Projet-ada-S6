@@ -29,106 +29,98 @@ package body Gestion_Liste_Personnel is
    end ajout_tete_liste;
 
 
-   procedure visu_liste (tete : in T_pteur_personnel) is 
+   procedure visu_liste (tete : in out T_pteur_personnel) is 
       
    begin 
 
       if tete /= null then 
-         Put_Line("identifiant : ");
-         Put(tete.perso.Id_personnel.Nom,tete.perso.Id_personnel.k_nom);
-         Put(tete.perso.Id_personnel.Prenom,tete.perso.Id_personnel.k_prenom);
-         Put_Line("nom de famille de la mère : ");
-         Put(tete.perso.Nom_famille_mere,tete.perso.k_nomMere);
-
-         Put_Line("metier : ");
-         Put(T_metier'image(tete.perso.Metier));
+         visu_1_personnel (tete.perso);
+         New_Line; new_line; new_line;
+         visu_liste (tete.suiv);
       end if;
-      visu_liste ((tete.suiv));
+      
    end visu_liste;
 
-   procedure initialiser_liste (tete : in out T_pteur_personnel) is
+   procedure initialiser_liste (tete : out T_pteur_personnel; perso : out T_personnel) is
    begin 
-      if tete = null then 
-         tete.perso.Id_personnel.Nom(1..8) := "Lovelace";
-         tete.perso.Id_personnel.k_nom := 8;
-         tete.perso.Id_personnel.Prenom := "Ada";
-         tete.perso.Id_personnel.k_prenom := 3;
-         tete.perso.Nom_famille_mere := "byron";
-         tete.perso.k_nomMere := 6;
-         tete.perso.user.login := "LOVELACE_ADA";
-         tete.perso.user.k_login := 15;
-         tete.perso.user.empreinte := 123456;
-         tete.perso.Metier := T_metier'Value("medecin");
-         tete.perso.new_mdp_Personnel := False;
-         tete:= new T_cell_personnel'(tete.perso,null);
+         perso.Id_personnel.Nom(1..8) := "Lovelace";
+         perso.Id_personnel.k_nom := 8;
+         perso.Id_personnel.Prenom(1..3) := "Ada";
+         perso.Id_personnel.k_prenom := 3;
+         perso.Nom_famille_mere(1..5) := "byron";
+         perso.k_nomMere := 5;
+         perso.user.login(1..12) := "LOVELACE_ADA";
+         perso.user.k_login := 12;
+         perso.user.empreinte := 123456;
+         perso.Metier := T_metier'Value("medecin");
+         perso.new_mdp_Personnel := False;
+         tete:= new T_cell_personnel'(perso,null);
 
-         tete.perso.Id_personnel.Nom := "Eyre";
-         tete.perso.Id_personnel.k_nom := 4;
-         tete.perso.Id_personnel.Prenom := "Jane";
-         tete.perso.Id_personnel.k_prenom := 4;
-         tete.perso.Nom_famille_mere := "Bronte";
-         tete.perso.k_nomMere := 6;
-         tete.perso.user.login := "EYRE_JANE";
-         tete.perso.user.k_login := 9;
-         tete.perso.user.empreinte := 789012;
-         tete.perso.Metier := T_metier'Value("secretaire");
-         tete.perso.new_mdp_Personnel := False;
-         tete := new T_cell_personnel'(tete.perso, tete);
+         perso.Id_personnel.Nom(1..4) := "Eyre";
+         perso.Id_personnel.k_nom := 4;
+         perso.Id_personnel.Prenom(1..4) := "Jane";
+         perso.Id_personnel.k_prenom := 4;
+         perso.Nom_famille_mere(1..6) := "Bronte";
+         perso.k_nomMere := 6;
+         perso.user.login(1..9) := "EYRE_JANE";
+         perso.user.k_login := 9;
+         perso.user.empreinte := 789012;
+         perso.Metier := T_metier'Value("secretaire");
+         perso.new_mdp_Personnel := False;
+         tete.suiv := new T_cell_personnel'(perso, null);
 
-         tete.perso.Id_personnel.Nom := "Sylvestre";
-         tete.perso.Id_personnel.k_nom := 8;
-         tete.perso.Id_personnel.Prenom := "Pierre";
-         tete.perso.Id_personnel.k_prenom := 6;
-         tete.perso.Nom_famille_mere := "Raynal";
-         tete.perso.k_nomMere := 6;
-         tete.perso.user.login := "SYLVESTRE_PIERRE";
-         tete.perso.user.k_login := 15;
-         tete.perso.user.empreinte := 345678;
-         tete.perso.Metier := T_metier'Value("medecin");
-         tete.perso.new_mdp_Personnel := True;
-         tete := new T_cell_personnel'(tete.perso, tete);
+         perso.Id_personnel.Nom(1..9) := "Sylvestre";
+         perso.Id_personnel.k_nom := 9;
+         perso.Id_personnel.Prenom(1..6) := "Pierre";
+         perso.Id_personnel.k_prenom := 6;
+         perso.Nom_famille_mere(1..6) := "Raynal";
+         perso.k_nomMere := 6;
+         perso.user.login(1..16) := "SYLVESTRE_PIERRE";
+         perso.user.k_login := 16;
+         perso.user.empreinte := 345678;
+         perso.Metier := T_metier'Value("medecin");
+         perso.new_mdp_Personnel := True;
+         tete.suiv.suiv:= new T_cell_personnel'(perso, null);
 
-         tete.perso.Id_personnel.Nom := "Lampion";
-         tete.perso.Id_personnel.k_nom := 7;
-         tete.perso.Id_personnel.Prenom := "Seraphin";
-         tete.perso.Id_personnel.k_prenom := 8;
-         tete.perso.Nom_famille_mere := "Herge";
-         tete.perso.k_nomMere := 5;
-         tete.perso.user.login := "LAMPION_SERAPHIN";
-         tete.perso.user.k_login := 15;
-         tete.perso.user.empreinte := 901234;
-         tete.perso.Metier := T_metier'Value("secretaire");
-         tete.perso.new_mdp_Personnel := False;
-         tete := new T_cell_personnel'(tete.perso, tete);
+         perso.Id_personnel.Nom(1..7) := "Lampion";
+         perso.Id_personnel.k_nom := 7;
+         perso.Id_personnel.Prenom(1..8) := "Seraphin";
+         perso.Id_personnel.k_prenom := 8;
+         perso.Nom_famille_mere(1..5) := "Herge";
+         perso.k_nomMere := 5;
+         perso.user.login(1..16) := "LAMPION_SERAPHIN";
+         perso.user.k_login := 16;
+         perso.user.empreinte := 901234;
+         perso.Metier := T_metier'Value("secretaire");
+         perso.new_mdp_Personnel := False;
+         tete.suiv.suiv.suiv := new T_cell_personnel'(perso, null);
 
-         tete.perso.Id_personnel.Nom := "Bovary";
-         tete.perso.Id_personnel.k_nom := 6;
-         tete.perso.Id_personnel.Prenom := "Emma";
-         tete.perso.Id_personnel.k_prenom := 4;
-         tete.perso.Nom_famille_mere := "Flaubert";
-         tete.perso.k_nomMere := 8;
-         tete.perso.user.login := "BOVARY_EMMA";
-         tete.perso.user.k_login := 10;
-         tete.perso.user.empreinte := 567890;
-         tete.perso.Metier := T_metier'Value("medecin");
-         tete.perso.new_mdp_Personnel := True;
-         tete := new T_cell_personnel'(tete.perso, tete);
+         perso.Id_personnel.Nom(1..6) := "Bovary";
+         perso.Id_personnel.k_nom := 6;
+         perso.Id_personnel.Prenom(1..4) := "Emma";
+         perso.Id_personnel.k_prenom := 4;
+         perso.Nom_famille_mere(1..8) := "Flaubert";
+         perso.k_nomMere := 8;
+         perso.user.login(1..11) := "BOVARY_EMMA";
+         perso.user.k_login := 11;
+         perso.user.empreinte := 567890;
+         perso.Metier := T_metier'Value("medecin");
+         perso.new_mdp_Personnel := True;
+         tete.suiv.suiv.suiv.suiv := new T_cell_personnel'(perso, null);
 
-         tete.perso.Id_personnel.Nom := "LADMIN";
-         tete.perso.Id_personnel.k_nom := 6;
-         tete.perso.Id_personnel.Prenom := "Lucien";
-         tete.perso.Id_personnel.k_prenom := 6;
-         tete.perso.Nom_famille_mere := "Mum";
-         tete.perso.k_nomMere := 3;
-         tete.perso.user.login := "LADMIN_LUCIEN";
-         tete.perso.user.k_login := 12;
-         tete.perso.user.empreinte := 123456;
-         tete.perso.Metier := T_metier'Value("administrateur");
-         tete.perso.new_mdp_Personnel := False;
-         tete := new T_cell_personnel'(tete.perso, tete);
+         perso.Id_personnel.Nom(1..6) := "LADMIN";
+         perso.Id_personnel.k_nom := 6;
+         perso.Id_personnel.Prenom(1..6) := "Lucien";
+         perso.Id_personnel.k_prenom := 6;
+         perso.Nom_famille_mere(1..3) := "Mum";
+         perso.k_nomMere := 3;
+         perso.user.login(1..13) := "LADMIN_LUCIEN";
+         perso.user.k_login := 13;
+         perso.user.empreinte := 123456;
+         perso.Metier := T_metier'Value("administrateur");
+         perso.new_mdp_Personnel := False;
+         tete.suiv.suiv.suiv.suiv.suiv := new T_cell_personnel'(perso, null);
       
-      end if;
-
    end initialiser_liste;
       
 end Gestion_Liste_Personnel;

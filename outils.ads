@@ -16,4 +16,5 @@ Package Outils is
    procedure Saisie_Identite (personne : OUT T_Personne);
    FUNCTION Verif_Mdp (Mdp : Taille_Mdp) RETURN Boolean;
    PROCEDURE Saisie_Mdp (Mdp :IN OUT taille_Mdp);
+   procedure visu_id (id : in T_Personne);
 End Outils;

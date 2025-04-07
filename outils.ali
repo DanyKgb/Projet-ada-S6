@@ -5,15 +5,18 @@ RN
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
 
-U outils%b		outils.adb		bd92307f NE OO PK KU
+U outils%b		outils.adb		c2734a0c NE OO PK KU
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 
-U outils%s		outils.ads		2137ff1f EE NE OO PK KM
+U outils%s		outils.ads		de3d4274 EE NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -33,9 +36,10 @@ D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050644 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
-D outils.ads		20250401172038 6f8906d9 outils%s
-D outils.adb		20250401154013 9ca5cf60 outils%b
+D outils.ads		20250407151920 9083bbb2 outils%s
+D outils.adb		20250407161225 1c4e0878 outils%b
 D system.ads		20200819050647 085b6ffb system%s
+D s-conca2.ads		20200819050645 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050645 54135002 system.exception_table%s
 D s-ficobl.ads		20200819050645 078245e4 system.file_control_block%s
@@ -53,6 +57,7 @@ G c Z s b [saisie_mot outils 15 14 none]
 G c Z s b [saisie_identite outils 16 14 none]
 G c Z s b [verif_mdp outils 17 13 none]
 G c Z s b [saisie_mdp outils 18 14 none]
+G c Z s b [visu_id outils 19 14 none]
 G c Z s s [t_personneIP outils 10 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 14|1r6 1r19 1r40 2r5 2r18 2r39 15|1r6 1r19 1r40 2r5 2r18 2r39
@@ -66,19 +71,19 @@ X 9 a-textio.ads
 57K13*Text_IO 727e16 14|1w10 2r9 15|1w10 2r9
 264U14*New_Line 15|18s10
 481U14*Get_Line 15|71s13
-508U14*Put_Line 15|37s10 43s10 45s10 70s13 76s38 77s32
+508U14*Put_Line 15|37s10 43s10 45s10 70s13 76s38 77s32 86s7 87s7
 548X4*Data_Error 15|77r18
 X 14 outils.ads
-4K9*Outils 19l5 19e11 15|5b14 84l5 84t11
+4K9*Outils 20l5 20e11 15|5b14 91l5 91t11
 5A12*T_Mot{string}<integer> 11r21 15r34 15|11r21
 6A12*T_titre{string}<integer>
 7A12*Taille_Mdp{string}<integer> 17r30 18r38 15|49r30 63r35
 8A12*T_log{string}<integer>
-10R9*T_Personne 13e14 16r46 15|41r46
-11a7*Nom{5A12} 15|44m30
-11a12*Prenom{5A12} 15|46m30
-12i7*k_nom{integer} 15|44r44
-12i14*k_prenom{integer} 15|46r47
+10R9*T_Personne 13e14 16r46 19r31 15|41r46 84r31
+11a7*Nom{5A12} 15|44m30 86r30
+11a12*Prenom{5A12} 15|46m30 87r33
+12i7*k_nom{integer} 15|44r44 86r40
+12i14*k_prenom{integer} 15|46r47 87r46
 15U14*Saisie_Mot 15<26 15>41 15|10b14 39l8 39t18 44s10 46s10
 15a26 P{5A12} 15|11b10 17m10 20r19 21r18 27r28 27r50 27r69 27r92 27r116 27r139
 15i41 K{integer} 15|12b10
@@ -88,6 +93,8 @@ X 14 outils.ads
 17a24 Mdp{7A12} 15|49b24 52r16 53r15
 18U14*Saisie_Mdp 18=26 15|63b11 82l8 82t18
 18a26 Mdp{7A12} 15|63b23 69m10 71m22 73r31
+19U14*visu_id 19>23 15|84b14 89l8 89t15
+19r23 id{10R9} 15|84b23 86r27 86r37 87r30 87r43
 X 15 outils.adb
 13b7 OK{boolean} 19m10 28m22 32m19 36r20
 20i14 I{integer} 21r20 27r24 27r46 27r71 27r94 27r118 27r141

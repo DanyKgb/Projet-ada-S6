@@ -44,5 +44,20 @@ package body gestion_personnel is
       end loop;
    
    end saisie_personnel;
+   
+   procedure visu_1_personnel (pers : in T_personnel) is
+
+   begin 
+
+      visu_id (pers.Id_personnel);
+
+      put("nom de famille de la mère : ");
+      Put_line(pers.Nom_famille_mere(1..pers.k_nomMere));
+
+      visu_log (pers.user.login(1..pers.user.k_login));
+      
+      put("metier : ");
+      Put(T_metier'image(pers.Metier));
+   end visu_1_personnel;
 
 end gestion_personnel;

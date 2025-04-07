@@ -81,4 +81,11 @@ PROCEDURE Saisie_Mdp (Mdp :IN OUT Taille_Mdp) IS
 
    END Saisie_Mdp;
 
+   procedure visu_id (id : in T_Personne) is
+   begin
+      Put_Line("Nom : " & id.Nom(1..id.k_nom));
+      Put_Line("Prenom : " & id.Prenom(1..id.k_prenom));
+      --Put_Line("Identifiant : " & id.Nom(1..id.k_nom) & "_" & id.Prenom(1..id.k_prenom)); ----- ça marche bien pour la generation de login
+   end visu_id;
+
 END Outils;

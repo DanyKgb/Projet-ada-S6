@@ -7,7 +7,7 @@ RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 
-U gestion_utilisateurs%b  gestion_utilisateurs.adb  a08ddea9 NE OO PK KM
+U gestion_utilisateurs%b  gestion_utilisateurs.adb  b62f8417 NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -18,7 +18,7 @@ W outils%s		outils.adb		outils.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U gestion_utilisateurs%s  gestion_utilisateurs.ads  70647e34 EE NE OO PK KM
+U gestion_utilisateurs%s  gestion_utilisateurs.ads  cb46156c EE NE OO PK KM
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -37,11 +37,11 @@ D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
-D gestion_utilisateurs.ads  20250402165031 5153812b gestion_utilisateurs%s
-D gestion_utilisateurs.adb  20250402165010 d0e9a09d gestion_utilisateurs%b
+D gestion_utilisateurs.ads  20250407161659 157b5718 gestion_utilisateurs%s
+D gestion_utilisateurs.adb  20250407161654 7d69917b gestion_utilisateurs%b
 D interfac.ads		20200819050644 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
-D outils.ads		20250401172038 6f8906d9 outils%s
+D outils.ads		20250407151920 9083bbb2 outils%s
 D system.ads		20200819050647 085b6ffb system%s
 D s-conca3.ads		20200819050645 0b705ca5 system.concat_3%s
 D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
@@ -57,10 +57,9 @@ D s-traent.ads		20200819050646 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200819050646 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [generer_log gestion_utilisateurs 14 13 none]
+G c Z s b [generer_log gestion_utilisateurs 14 14 none]
 G c Z s b [saisie_log gestion_utilisateurs 15 14 none]
-G c Z s b [saisie_mdp gestion_utilisateurs 17 14 none]
-G c Z s b [saisie_user gestion_utilisateurs 18 14 none]
+G c Z s b [visu_log gestion_utilisateurs 16 14 none]
 G c Z s s [t_utilisateurIP gestion_utilisateurs 7 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 12|1r6 1r19 1r48 2r5 2r18 2r47 13|1r6 1r19 1r48 2r5 2r18 2r47
@@ -73,38 +72,35 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|46] 12|1w23 2r22 13|1w23 2r22
 X 9 a-textio.ads
 57K13*Text_IO 727e16 12|1w10 2r9 13|1w10 2r9
-465U14*Put 13|24s7 50s7
-508U14*Put_Line 13|71s4 74s4
+264U14*New_Line 13|47s4
+465U14*Put 13|24s7 45s4 46s4
 X 12 gestion_utilisateurs.ads
-4K9*Gestion_Utilisateurs 20l5 20e25 13|4b14 80l5 80t25
-7R9*T_Utilisateur 12e14 18r38 13|68r35
-8a7*Login{16|8A12} 13|72m20
+4K9*Gestion_Utilisateurs 21l5 21e25 13|4b14 88l5 88t25
+7R9*T_Utilisateur 12e14
+8a7*Login{16|8A12}
 9i7*K_login{integer}
-10i7*empreinte{integer} 13|77m9 77r27
+10i7*empreinte{integer}
 11a7*mdp{16|7A12}
-14V13*generer_log{16|8A12} 14>26 14<45 13|6b13 17l8 17t19
-14r26 pers{16|10R9} 13|6b26 13r23 14r26
-14a45 log{16|8A12} 13|6b45 12m7 15m7 16r14
-15U14*saisie_log 15<26 13|19b11 41l5 41t15 72s4
+14U14*generer_log 14>27 14<46 13|6b14 17l8 17t19
+14r27 pers{16|10R9} 13|6b27 13r23 13r35 14r26 14r41
+14a46 log{16|8A12} 13|6b46 12m7 15m7
+15U14*saisie_log 15<26 13|19b11 41l5 41t15
 15a26 log{16|8A12} 13|19b23 23m4 26r16 27r15 30r28 30r52 30r73 30r98
-17U14*saisie_mdp 17<26 13|45b11 64l5 64t15
-17a26 mdp{16|7A12} 13|45b23 52r16 53r15
-18U14*saisie_user 18<27 13|68b11 78l5 78t16
-18r27 user{7R9} 13|68b24 72m15 72r15 77m4 77r22
+16U14*visu_log 16>24 13|43b11 48l5 48t13
+16a24 log{16|8A12} 13|43b21 46r9 46r16
 X 13 gestion_utilisateurs.adb
 8a7 NOM{16|5A12} 13m7 15r14
-8a12 PRENOM{16|5A12} 14m7 15r24
+8a12 PRENOM{16|5A12} 14m7 15r22
 20b4 ok{boolean} 25m7 31m22 35m19 39r17
 26i11 i{integer} 27r19 30r24 30r48 30r77 30r102
-46b4 ok{boolean} 51m7 57m16 61r17
-47i4 k{integer} 55m70 55r75 61r36
-52i11 i{integer} 53r19
 X 16 outils.ads
-4K9*Outils 12|1w40 2r39 13|1w40 2r39 16|19e11
+4K9*Outils 12|1w40 2r39 13|1w40 2r39 16|20e11
 5A12*T_Mot{string}<integer> 13|8r21
-7A12*Taille_Mdp{string}<integer> 12|11r13 17r37 13|45r33
-8A12*T_log{string}<integer> 12|8r15 14r55 14r69 15r36 13|6r55 6r69 19r33
-10R9*T_Personne 12|14r33 13|6r33 16|13e14
+7A12*Taille_Mdp{string}<integer> 12|11r13
+8A12*T_log{string}<integer> 12|8r15 14r56 15r36 16r33 13|6r56 19r33 43r30
+10R9*T_Personne 12|14r34 13|6r34 16|13e14
 11a7*Nom{5A12} 13|13r28
 11a12*Prenom{5A12} 13|14r31
+12i7*k_nom{integer} 13|13r40
+12i14*k_prenom{integer} 13|14r46
 
