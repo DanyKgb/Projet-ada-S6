@@ -14,4 +14,6 @@ Package Gestion_Liste_Personnel is
    procedure ajout_tete_liste (tete : in out T_pteur_personnel; pers : in T_personnel);
    procedure visu_liste (tete : in out T_pteur_personnel);
    procedure initialiser_liste (tete : out T_pteur_personnel; perso : out T_personnel);
+   procedure supprimer_liste (tete : out T_pteur_personnel; perso : out T_personnel);
+   
 End Gestion_Liste_Personnel;

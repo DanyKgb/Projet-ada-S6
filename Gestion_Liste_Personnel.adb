@@ -124,4 +124,35 @@ package body Gestion_Liste_Personnel is
    end initialiser_liste;
 
 
+ PROCEDURE Supprimer_personnel (tete : IN OUT T_Pteur_personnel) IS
+   tete : T_Pteur_personnel := tete;
+   perso : T_Mot := (others => ' ');
+   fait : boolean := false;
+BEGIN
+   Put_Line("saisissez la personne a supprimer :");
+   Saisie_Mot(perso);,
+   WHILE tete /= NULL and then tete.suiv /= null LOOP
+      Put("recherche");New_Line;
+      IF tete.perso.Nom = perso THEN
+         tete := tete.Suiv;
+         Fait := True;
+         EXIT;
+      end if;
+      IF tete.suiv.perso.nom = perso THEN
+         tete.suiv := tete.Suiv.suiv;
+         Fait := True;
+         exit;
+      END IF;
+      tete:= tete.Suiv;
+   END LOOP;
+   IF Fait THEN
+      Put_Line("Suppression effectuee.");
+   ELSE
+      Put_Line("Personne non trouvee dans la liste.");
+   END IF;
+END supprimer_personnel;
+
+   
+      
+-->>>>>>> d97c278 (Mise ├á jour automatique)
 end Gestion_Liste_Personnel;
