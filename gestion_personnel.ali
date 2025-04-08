@@ -7,7 +7,7 @@ RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
 
-U gestion_personnel%b	gestion_personnel.adb	735cf9ed NE OO PK IL
+U gestion_personnel%b	gestion_personnel.adb	30d70c7a NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -40,7 +40,7 @@ D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
 D gestion_personnel.ads	20250407151511 f02b03d8 gestion_personnel%s
-D gestion_personnel.adb	20250407161115 4831ef59 gestion_personnel%b
+D gestion_personnel.adb	20250408122138 0bba1ace gestion_personnel%b
 D gestion_utilisateurs.ads  20250407161659 157b5718 gestion_utilisateurs%s
 D interfac.ads		20200819050644 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
@@ -67,7 +67,6 @@ G c Z s s [t_personnelIP gestion_personnel 7 9 none]
 G r c none [saisie_personnel gestion_personnel 15 14 none] [saisie_identite outils 16 14 none]
 G r c none [saisie_personnel gestion_personnel 15 14 none] [saisie_mot outils 15 14 none]
 G r c none [visu_1_personnel gestion_personnel 16 14 none] [visu_id outils 19 14 none]
-G r c none [visu_1_personnel gestion_personnel 16 14 none] [visu_log gestion_utilisateurs 16 14 none]
 G r s t_personne [t_personnelIP gestion_personnel 7 9 none] [t_personneIP outils 10 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 12|1r6 1r19 2r5 2r18 13|1r6 1r19 1r40 2r5 2r18 2r39
@@ -94,13 +93,13 @@ X 12 gestion_personnel.ads
 8r7*Id_personnel{17|10R9} 13|15m28 52r21
 9a7*Nom_famille_mere{17|5A12} 13|17m23 55r21
 10i7*k_nomMere{integer} 13|17r45 55r46
-11r7*user{14|7R9} 13|57r22 57r41
+11r7*user{14|7R9}
 12e7*Metier{5E9} 13|25m18 60r31
 13b7*new_mdp_Personnel{boolean} 13|38m18 40m18
 15U14*saisie_personnel 15<32 13|6b14 46l8 46t24
 15r32 pers{7R9} 13|6b32 15m23 15r23 17m18 17r18 17r40 25m13 38m13 40m13
 16U14*visu_1_personnel 16>32 13|48b14 61l8 61t24
-16r32 pers{7R9} 13|48b32 52r16 55r16 55r41 57r17 57r36 60r26
+16r32 pers{7R9} 13|48b32 52r16 55r16 55r41 60r26
 X 13 gestion_personnel.adb
 8a7 s{string} 24m23 25r43
 9i7 k{integer} 24m25 25r48
@@ -108,13 +107,9 @@ X 13 gestion_personnel.adb
 X 14 gestion_utilisateurs.ads
 4K9*Gestion_Utilisateurs 12|1w48 2r47 13|1w73 2r72 14|21e25
 7R9*T_Utilisateur 12|11r14 14|12e14
-8a7*Login{17|8A12} 13|57r27
-9i7*K_login{integer} 13|57r46
-16U14*visu_log 13|57s7
 X 17 outils.ads
 4K9*Outils 12|1w40 2r39 13|1w65 2r64 17|20e11
 5A12*T_Mot{string}<integer> 12|9r26
-8A12*T_log{string}<integer>
 10R9*T_Personne 12|8r22 17|13e14
 15U14*Saisie_Mot 13|17s7
 16U14*Saisie_Identite 13|15s7

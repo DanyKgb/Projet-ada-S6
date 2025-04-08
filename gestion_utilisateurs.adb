@@ -41,14 +41,14 @@ end saisie_log;
 
 
 ----------------- a refaire -------------------
---  procedure visu_log (log : in T_log) is
---     pers : T_Personne;
---  begin
---     Put("login : ");
---     generer_log (pers, log);
---     Put_Line("Identifiant : " & id.Nom(1..id.k_nom) & "_" & id.Prenom(1..id.k_prenom)); ----- ça marche bien pour la generation de login
+procedure visu_log (log : in T_log) is
+   pers : T_Personne;
+begin
+   Put("login : ");
+   --generer_log (pers, log);
+   Put_Line("Identifiant : " & pers.Nom(1..pers.k_nom) & "_" & pers.Prenom(1..pers.k_prenom)); ----- ça marche bien pour la generation de login
 
---  end visu_log;
+end visu_log;
 
 
 -------------------------------------------------------------------------------
