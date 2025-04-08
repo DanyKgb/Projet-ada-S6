@@ -3,10 +3,9 @@ use ada.Text_IO, ada.integer_Text_IO, Ada.Characters.Handling, Outils, gestion_a
 
 procedure centre_medical is 
    tete_pers : T_pteur_personnel;
-   personne : T_personnel;
+   personnel : T_personnel;
 begin 
 
-   initialiser_liste (tete_pers, personne);
-   put_line("initialisation de la liste");
-   visu_liste (tete_pers);
+   saisie_personnel (personnel);
+
 end centre_medical;

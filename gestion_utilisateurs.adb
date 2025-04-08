@@ -37,6 +37,7 @@ begin
       end loop;
       exit when ok = true;
    end loop;
+   log := to_upper(log);
 end saisie_log;
 
 
@@ -57,9 +58,12 @@ end visu_log;
 --     ok : Boolean := False;
 --     k : integer := 0;
 --  begin
+
+--     mdp := (others => ' ');
+
 --     loop
 --        Put("Saisir le mot de passe : ");
---        --get_line
+--        get_line(mdp, k);
 --        ok := true;
 --        for i in mdp'range loop
 --           case mdp(i) is
@@ -75,18 +79,27 @@ end visu_log;
 
 --  end saisie_mdp;
 
---     --  function calcul_empreinte (empreinte : integer) return Integer is 
+function calcul_empreinte (mdp : Taille_Mdp) return Integer is
+   cpt: integer:=0;
+begin 
+   for i in 1..10 loop
+      cpt:= cpt+i*character'pos(mdp(i));
+   end loop;
+   put ("Votre empreinte est : ");
+      return(cpt mod 2048);
+end calcul_empreinte;  
 
---  procedure saisie_user (user : out T_Utilisateur) is
+procedure saisie_user (user : out T_Utilisateur) is
 
---  begin
---     Put_Line("Saisir le login : ");
---     saisie_log(user.login);
---     --user.k_login := length(user.login);
---     Put_Line("Saisir l'empreinte : ");
---     -- se calcule a partir du mdp
---     --Get(user.empreinte);
---     user.empreinte := user.empreinte;
---  end saisie_user;
+begin
+   Put_Line("le login : ");
+   saisie_log (user.login);
+   --  user.k_login := length'(user.login); 
+
+   Put_Line("Saisir l'empreinte : ");
+   user.empreinte := calcul_empreinte(user.mdp);
+   put("Saisir le mot de passe : ");
+   saisie_mdp(user.mdp);
+end saisie_user;
 
 end Gestion_Utilisateurs;

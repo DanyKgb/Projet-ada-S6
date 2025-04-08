@@ -8,14 +8,16 @@ PACKAGE BODY Outils IS
    -------------------------------- Saisie du nom et du prénom -------------------------------
 
    PROCEDURE Saisie_Mot (
-         P :    OUT T_Mot;
-         K  : Integer) IS
-      OK : Boolean;      
+         P :    OUT T_Mot) IS
+      OK : Boolean;    
+      s : string (1..20);  
+      K : Integer;
 
    BEGIN
       LOOP
          P := (OTHERS => ' ');
-         New_Line;
+         get_line(s, K); skip_line;
+         P := s(1..K);
          OK := True;
          FOR I IN P'RANGE LOOP
             CASE P(I) IS
@@ -41,9 +43,9 @@ PACKAGE BODY Outils IS
    PROCEDURE Saisie_Identite (personne : OUT T_Personne) IS
       BEGIN
          Put_Line("Entrez le nom : ");
-         Saisie_Mot(personne.Nom, personne.k_nom);
+         Saisie_Mot(personne.Nom);
          Put_Line("Entrez le prenom : ");
-         Saisie_Mot(Personne.Prenom, personne.k_prenom);
+         Saisie_Mot(Personne.Prenom);
    END Saisie_Identite;
 
    FUNCTION Verif_Mdp (Mdp : Taille_Mdp) RETURN Boolean IS
@@ -60,16 +62,18 @@ PACKAGE BODY Outils IS
    END Verif_Mdp;
 
 
-PROCEDURE Saisie_Mdp (Mdp :IN OUT Taille_Mdp) IS
-      Saisie:boolean;
-      k:integer;
+PROCEDURE Saisie_Mdp (Mdp : OUT Taille_Mdp) IS
+      Saisie : boolean;
+      k : integer := 0;
    BEGIN
       LOOP
          BEGIN
-         Mdp :=("          ");
+         loop
+            Mdp := (others => ' ');
             Put_Line("Saisir le mot de passe. En utilisant des Letres majuscules, minuscules,des chiffres et les caractères suivants : #,*,.,!,?, Le mot de passe doit Faire 10 caractères");
             Get_Line(Mdp,K);
             Exit when k=10;
+         end loop;
             saisie:=Verif_Mdp(Mdp);
             EXIT WHEN Saisie=True;
          EXCEPTION

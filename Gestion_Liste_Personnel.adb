@@ -122,5 +122,6 @@ package body Gestion_Liste_Personnel is
          tete.suiv.suiv.suiv.suiv.suiv := new T_cell_personnel'(perso, null);
       
    end initialiser_liste;
-      
+
+
 end Gestion_Liste_Personnel;

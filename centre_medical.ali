@@ -6,7 +6,7 @@ RN
 RV NO_IO
 RV NO_DEFAULT_INITIALIZATION
 
-U centre_medical%b	centre_medical.adb	f1d3e62c NE OO SU IL
+U centre_medical%b	centre_medical.adb	45ee5568 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
@@ -37,7 +37,7 @@ D a-tags.ads		20200819050643 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050643 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050643 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050643 0e9b276f ada.unchecked_conversion%s
-D centre_medical.adb	20250407150259 748c49a8 centre_medical%b
+D centre_medical.adb	20250408134051 a994c00f centre_medical%b
 D gestion_arbre_patient.ads  20250327164958 9d27835e gestion_arbre_patient%s
 D gestion_archivage_documents.ads  20250325150913 79bdf220 gestion_archivage_documents%s
 D gestion_connexion.ads	20250325150450 2bdd370b gestion_connexion%s
@@ -48,10 +48,10 @@ D gestion_liste_documents.ads  20250325150650 e36e33f9 gestion_liste_documents%s
 D gestion_liste_personnel.ads  20250407150722 3869db60 gestion_liste_personnel%s
 D gestion_patient.ads	20250325152951 62cbf13b gestion_patient%s
 D gestion_personnel.ads	20250407151511 f02b03d8 gestion_personnel%s
-D gestion_utilisateurs.ads  20250407161659 157b5718 gestion_utilisateurs%s
+D gestion_utilisateurs.ads  20250408134933 191f6a7f gestion_utilisateurs%s
 D interfac.ads		20200819050644 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050644 e53d8b8e interfaces.c_streams%s
-D outils.ads		20250407151920 9083bbb2 outils%s
+D outils.ads		20250408144251 f5c2bc36 outils%s
 D system.ads		20200819050647 085b6ffb system%s
 D s-crtl.ads		20200819050645 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050645 54135002 system.exception_table%s
@@ -69,8 +69,7 @@ D s-wchcon.ads		20200819050646 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [centre_medical standard 4 11 none]
 G r s t_personnel [centre_medical standard 4 11 none] [t_personnelIP gestion_personnel 7 9 none]
-G r c none [centre_medical standard 4 11 none] [initialiser_liste gestion_liste_personnel 16 14 none]
-G r c none [centre_medical standard 4 11 none] [visu_liste gestion_liste_personnel 15 14 none]
+G r c none [centre_medical standard 4 11 none] [saisie_personnel gestion_personnel 15 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 13|1r6 1r19 1r40 2r5 2r18 2r39
 X 2 a-charac.ads
@@ -81,11 +80,10 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[11|46] 13|1w23 2r22
 X 10 a-textio.ads
 57K13*Text_IO 727e16 13|1w10 2r9
-508U14*Put_Line 13|10s4
 X 13 centre_medical.adb
-4U11*centre_medical 4b11 12l5 12t19
-5p4 tete_pers{21|6P9} 9m23 9r23 11m16 11r16
-6r4 personne{23|7R9} 9m34
+4U11*centre_medical 4b11 11l5 11t19
+5p4 tete_pers{21|6P9}
+6r4 personnel{23|7R9} 9m22
 X 14 gestion_arbre_patient.ads
 4K9*gestion_arbre_patient 13|1w73 2r72 14|12e26
 X 15 gestion_archivage_documents.ads
@@ -103,13 +101,12 @@ X 20 gestion_liste_documents.ads
 X 21 gestion_liste_personnel.ads
 4K9*Gestion_Liste_Personnel 13|1w264 2r263 21|17e28
 6P9*T_pteur_personnel(5R9) 13|5r16
-15U14*visu_liste 13|11s4
-16U14*initialiser_liste 13|9s4
 X 22 gestion_patient.ads
 4K9*gestion_patient 13|1w155 2r154 22|12e20
 X 23 gestion_personnel.ads
 4K9*gestion_personnel 13|1w172 2r171 23|18e22
-7R9*T_personnel 13|6r15 23|14e14
+7R9*T_personnel 13|6r16 23|14e14
+15U14*saisie_personnel 13|9s4
 X 24 gestion_utilisateurs.ads
 4K9*Gestion_Utilisateurs 13|1w289 2r288 24|21e25
 X 27 outils.ads

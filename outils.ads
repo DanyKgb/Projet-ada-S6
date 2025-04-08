@@ -12,9 +12,9 @@ Package Outils is
       k_nom, k_prenom : Integer;
    End record;
 
-   procedure Saisie_Mot (P : out T_Mot; K : Integer);
+   procedure Saisie_Mot (P : out T_Mot);
    procedure Saisie_Identite (personne : OUT T_Personne);
    FUNCTION Verif_Mdp (Mdp : Taille_Mdp) RETURN Boolean;
-   PROCEDURE Saisie_Mdp (Mdp :IN OUT taille_Mdp);
+   PROCEDURE Saisie_Mdp (Mdp : OUT taille_Mdp);
    procedure visu_id (id : in T_Personne);
 End Outils;
