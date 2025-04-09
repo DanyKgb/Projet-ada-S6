@@ -102,4 +102,32 @@ begin
    saisie_mdp(user.mdp);
 end saisie_user;
 
+ PROCEDURE Supprimer_util (util : IN OUT T_utilisateur) IS
+   util : T_utilisateur := util;
+   perso : T_Mot := (others => ' ');
+   fait : boolean := false;
+BEGIN
+   Put_Line("saisissez l'utilisateur a supprimer :");
+   Saisie_Mot(perso);,
+   WHILE util /= NULL and then util.suiv /= null LOOP
+      Put("recherche");New_Line;
+      IF util.perso.Nom = perso THEN
+         util := util.Suiv;
+         Fait := True;
+         EXIT;
+      end if;
+      IF util.suiv.perso.nom = perso THEN
+         util.suiv := util.Suiv.suiv;
+         Fait := True;
+         exit;
+      END IF;
+      util:= util.Suiv;
+   END LOOP;
+   IF Fait THEN
+      Put_Line("Suppression effectuee.");
+   ELSE
+      Put_Line("Utilisateur non trouvee dans la liste.");
+   END IF;
+END supprimer_personnel;
+
 end Gestion_Utilisateurs;

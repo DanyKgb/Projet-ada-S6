@@ -15,7 +15,8 @@ Package Gestion_Utilisateurs is
    procedure saisie_log (log : out T_log);
    procedure visu_log (log : in T_log);
    function calcul_empreinte (mdp : Taille_Mdp) return Integer;
-   --  procedure saisie_mdp (mdp :  out Taille_Mdp);
+   procedure saisie_mdp (mdp :  out Taille_Mdp);
    procedure saisie_user (user : out T_Utilisateur);
+   procedure supprimer_util (util: out T_utilisateur);
 
 End Gestion_Utilisateurs;
