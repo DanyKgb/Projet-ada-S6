@@ -126,11 +126,11 @@ package body Gestion_Liste_Personnel is
 
  PROCEDURE Supprimer_personnel (tete : IN OUT T_Pteur_personnel) IS
    tete : T_Pteur_personnel := tete;
-   perso : T_Mot := (others => ' ');
+   personne : T_Mot := (others => ' ');
    fait : boolean := false;
 BEGIN
    Put_Line("saisissez la personne a supprimer :");
-   Saisie_Mot(perso);,
+   Saisie_Mot(personne);,
    WHILE tete /= NULL and then tete.suiv /= null LOOP
       Put("recherche");New_Line;
       IF tete.perso.Nom = perso THEN

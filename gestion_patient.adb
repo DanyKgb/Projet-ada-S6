@@ -1,8 +1,5 @@
-with Ada.Text_IO; use Ada.Text_IO;
-with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with Outils; use Outils;
-with Gestion_Utilisateurs; use Gestion_Utilisateurs;
-with Gestion_Liste_Documents; use Gestion_Liste_Documents;
+WITH Ada.Text_Io, Ada.Integer_Text_Io, Outils, Gestion_Utilisateurs, Gestion_Liste_Documents;
+USE Ada.Text_Io, Ada.Integer_Text_Io, Outils, Gestion_Utilisateurs, Gestion_Liste_Documents;
 
 package body Gestion_Patient is
 
@@ -25,10 +22,7 @@ package body Gestion_Patient is
    end Initialiser_Patient;
 
    -- Ajouter un document à un patient
-   procedure Ajouter_Document (
-      Patient     : in out T_Patients;
-      Nouveau_Doc : in     T_Pteur_Doc
-   ) is
+   procedure Ajouter_Document (Patient: in out T_Patients; Nouveau_Doc: in T_Pteur_Doc) is
    begin
       if Nouveau_Doc /= null then
          Nouveau_Doc.Suivant := Patient.P_DocumentPatient;
@@ -76,21 +70,6 @@ package body Gestion_Patient is
       end loop;
    end Afficher_Documents;
 
-   -- Vérifier si un patient a un document spécifique
-   function Possede_Document (
-      Patient : T_Patients;
-      Id_Doc  : Integer
-   ) return Boolean is
-      Courant : T_Pteur_Doc;
-   begin
-      Courant := Patient.P_DocumentPatient;
-      while Courant /= null loop
-         if Courant.Id = Id_Doc then
-            return True;
-         end if;
-         Courant := Courant.Suivant;
-      end loop;
-      return False;
-   end Possede_Document;
+
 
 end Gestion_Patient;
