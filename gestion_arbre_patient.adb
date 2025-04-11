@@ -1,3 +1,6 @@
+WITH Ada.Text_Io, Ada.Integer_Text_Io, gestion_patient, Outils;
+USE Ada.Text_Io, Ada.Integer_Text_Io, gestion_patient, Outils;
+
 PACKAGE BODY Gestion_Arbre_Patient IS
 
    -- Fonction de création d'un arbre vide
