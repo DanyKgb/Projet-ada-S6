@@ -31,8 +31,7 @@ PACKAGE BODY Gestion_Arbre_Patient IS
    END Inserer;
 
    -- Fonction pour trouver le min d'un sous-arbre (utile pour la suppression)
-   FUNCTION Min_Node (
-         Arbre : T_Arbre_Patients)
+   FUNCTION Min_Node (Arbre : T_Arbre_Patients);
      RETURN T_Arbre_Patients IS
       Courant : T_Arbre_Patients := Arbre;
    BEGIN
@@ -43,10 +42,7 @@ PACKAGE BODY Gestion_Arbre_Patient IS
    END Min_Node;
 
    -- Procédure de suppression d'un patient
-   PROCEDURE Supprimer (
-         Arbre  : IN OUT T_Arbre_Patients;
-         Nom,
-         Prenom :        T_Mot) IS
+   PROCEDURE Supprimer (Arbre: IN OUT T_Arbre_Patients; Nom,Prenom :T_Mot) IS
    BEGIN
       IF Arbre = NULL THEN
          Put_Line("Patient non trouvé.");
@@ -75,8 +71,7 @@ PACKAGE BODY Gestion_Arbre_Patient IS
    END Supprimer;
 
    -- Procédure d'affichage de l'arbre (parcours infixe)
-   PROCEDURE Afficher_Arbre (
-         Arbre : T_Arbre_Patients) IS
+   PROCEDURE Afficher_Arbre ( Arbre : T_Arbre_Patients) IS
    BEGIN
       IF Arbre /= NULL THEN
          Afficher_Arbre(Arbre.Fg);
