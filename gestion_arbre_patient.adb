@@ -73,7 +73,7 @@ PACKAGE BODY Gestion_Arbre_Patient IS
       END IF;
    END Supprimer;
 
-   -- Procédure d'affichage de l'arbre (parcours infixe)
+   -- Procédure d'affichage de l'arbre
    PROCEDURE Afficher_Arbre ( Arbre : T_Arbre_Patients) IS
    BEGIN
       IF Arbre /= NULL THEN
